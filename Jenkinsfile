@@ -1,10 +1,12 @@
 pipeline {
     agent any
-
+    tools {
+        maven "mymaven"
+    }
     stages {
         stage('Checkout Code') {
             steps {
-                echo 'Code already present'
+                git 'https://github.com/gaura1089/docker-ci-lab.git'
             }
         }
 
