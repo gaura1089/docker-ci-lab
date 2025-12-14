@@ -25,7 +25,7 @@ pipeline {
         stage('Docker Run') {
             steps {
                 sh '''
-                docker rm -f docker-ci || true
+     
                 docker run -d --name docker-ci docker-ci-app:v1
                 '''
             }
